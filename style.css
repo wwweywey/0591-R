@@ -4,7 +4,7 @@ html {
 
 * {
   margin: 0;
-  /* padding: 0; */
+
   font-family: "Abril Fatface", cursive;
   font-family: "Source Sans Pro", sans-serif;
   color: #ffffff;
@@ -12,10 +12,7 @@ html {
 
 body {
   background-color: #0d1017;
-  /* background-image: url(/Assets/img/bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat; */
-  /* background: rgb(9,9,121); */
+
   background: linear-gradient(
     128deg,
     rgba(7, 37, 65, 1) 0%,
@@ -29,13 +26,11 @@ body {
 #header {
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 5;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(70px);
   padding: 24px 360px;
   box-sizing: border-box;
-  /* margin-top: 20px;
-  margin-bottom: 20px; */
 }
 
 .pageLogo {
@@ -43,25 +38,23 @@ body {
   vertical-align: middle;
 }
 
-.navbar li {
-  display: inline-block;
-  /* padding-left: 40px;
-  padding-right: 40px; */
-  
+.pageLogo:hover {
+  transform: rotate(10deg);
 }
 
-.navbar a {
+.navbar li {
+  display: inline-block;
+}
+
+.navbar .navlink {
   text-decoration: none;
   padding: 24px 40px;
 }
 
-.navbar a:hover {
-  /* border-bottom: 2px solid #fca326; */
+.navbar .navlink:hover {
   background-color: #fca326;
-  /* height: 10px; */
   color: #0d1017;
   padding: 24px 40px;
-  /* background-color: antiquewhite; */
 }
 
 .navbar ul {
@@ -96,10 +89,6 @@ body {
   border: 2px solid #fca326;
 }
 
-/* .hoverText {
-  position: absolute;
-} */
-
 /* -------------- INTRO PAGE -------------- */
 
 .intro {
@@ -108,10 +97,7 @@ body {
 }
 
 #introPage {
-  /* padding: 0 420px; */
   height: 100vh;
-  /* position: fixed; */
-  /* z-index: -1; */
 }
 
 #introPage h1 {
@@ -123,18 +109,23 @@ body {
 
 .intro p {
   width: 360px;
-  line-height: 24px;
+  line-height: 34px;
 }
 
 .introContent {
-  /* position: fixed; */
-  /* z-index: -1; */
+  position: fixed;
+  z-index: -1;
   padding: 0 420px;
   height: 100vh;
+  width: 60%;
 }
 
 .resumeButton {
   margin-top: 60px;
+}
+
+.resumebttn {
+  z-index: 5;
 }
 
 .resumeButton,
@@ -243,7 +234,7 @@ body {
 .blogPost {
   position: relative;
   box-sizing: border-box;
-  /* border: 1px solid white; */
+
   height: 100vh;
   width: auto;
   flex: 1;
@@ -325,7 +316,6 @@ body {
   margin: 40px 0px;
   width: 220px;
   display: block;
-  
 }
 
 #contactPage {
@@ -342,7 +332,6 @@ body {
 /* -------------- FOOTER PAGE -------------- */
 
 .footerSocialImages img {
-  /* background-color: aqua; */
   width: 40px;
   border-radius: 5px;
   margin: 0px 5px;
