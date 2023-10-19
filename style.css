@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 * {
@@ -19,6 +20,7 @@ body {
     rgba(13, 16, 23, 1) 25%,
     rgba(7, 9, 14, 1) 100%
   );
+  box-sizing: border-box;
 }
 
 /* ------------ HEADER ------------ */
@@ -29,8 +31,13 @@ body {
   z-index: 5;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(70px);
-  padding: 24px 360px;
+  /* padding: 24px 360px; */
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  height: 4em;
+  align-items: center;
+  align-content: center;
 }
 
 .pageLogo {
@@ -61,18 +68,24 @@ body {
   float: right;
 }
 
+.navbar {
+  display: flex;
+  gap: 8em;
+  align-items: center;
+}
+
 /* -------------SOCIAL MEDIA ----------- */
 
 .socialMedia {
   position: fixed;
-  z-index: 1;
+  z-index: 4;
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
   align-items: flex-end;
   width: 100px;
   left: 230px;
-  bottom: 94px;
+  bottom: 15em;
   text-align: right;
   padding: 10px;
 }
@@ -125,7 +138,10 @@ body {
 }
 
 .resumebttn {
-  z-index: 5;
+  /* z-index: 5; */
+  position: fixed;
+  top: 370px;
+  left: 420px;
 }
 
 .resumeButton,
@@ -151,6 +167,9 @@ body {
   position: absolute;
   right: 5px;
   height: 100%;
+}
+
+.landingPage {
 }
 
 .mouseScroll {
@@ -208,14 +227,23 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  z-index: 2;
+  position: relative;
+}
+
+.skillContent h2,
+.projectContent h2,
+#contactPage h2 {
+  font-size: 3em;
 }
 
 /* -------------- BLOG PAGE -------------- */
 
 #blogPage {
-  display: inline;
+  display: block;
   position: relative;
-  z-index: 2;
+  z-index: 3;
+  background: rgba(7, 9, 14, 1) 100%;
 }
 
 .blogContent {
@@ -265,19 +293,14 @@ body {
 .projectContent {
   max-width: 500px;
   text-align: center;
-  font-size: 60px;
-}
-
-#projectPage {
-  background-color: #072541;
-}
-
-#projectPage {
-  position: relative;
+  /* font-size: 60px; */
 }
 
 #projectPage {
   height: 50vh;
+  z-index: 3;
+  position: relative;
+  background-color: #072541;
 }
 
 .projectContainer {
@@ -293,10 +316,23 @@ body {
 .projectContainer .project {
   flex: 1;
   background-color: #afafaf;
-  color: #8b8b8b;
   text-align: center;
   border-radius: 5px;
   vertical-align: middle;
+}
+
+.project p {
+  color: #8b8b8b;
+}
+
+.project {
+  display: flex;
+  height: 240px;
+  width: 320px;
+  align-items: center;
+  justify-content: center;
+  font-size: 2em;
+  font-weight: 900;
 }
 
 /* -------------- CONTACT PAGE -------------- */
@@ -306,27 +342,37 @@ body {
   border: 1px solid #3a3a3a;
   border-radius: 10px;
   width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  margin: 1em;
 }
 
 #contactPage input[type="text"] {
   background-color: #0d1017;
   border: 0;
   border-bottom: 1px solid #afafaf;
-  padding: 5px 10px;
-  margin: 40px 0px;
-  width: 220px;
+  padding: 1.5em 1em;
+  margin: 1em;
+  width: 100%;
   display: block;
 }
 
 #contactPage {
   display: flex;
-  gap: 50px;
+  /* gap: 50px; */
   background: linear-gradient(
     318deg,
     rgba(7, 37, 65, 1) 0%,
     rgba(13, 16, 23, 1) 25%,
     rgba(7, 9, 14, 1) 100%
   );
+  flex-direction: column;
+}
+
+.formSubmit {
+  margin: 2em 0;
 }
 
 /* -------------- FOOTER PAGE -------------- */
@@ -337,10 +383,257 @@ body {
   margin: 0px 5px;
 }
 
+.footerSocialImages p {
+  font-size: 1.5em;
+}
+
 footer {
   width: 100%;
   height: 100px;
   text-align: center;
   padding-top: 20px;
   background-color: #07090e;
+}
+
+footer p {
+  color: #6b6b6b;
+  margin-top: 1em;
+}
+
+@media (max-width: 480px) {
+  #introPage {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* width: 100vw; */
+    height: 680px;
+  }
+
+  .introContent {
+    /* background-color: red; */
+    width: 100%;
+    padding: 0;
+    height: inherit;
+  }
+
+  .navbar {
+    gap: 0;
+  }
+
+  .intro {
+    /* position: unset; */
+    padding: 0 1em;
+    /* height: 680px;*/
+  }
+
+  #header {
+    padding: 1em;
+  }
+
+  .navbar ul {
+    visibility: hidden;
+  }
+
+  .socialMedia {
+    visibility: hidden;
+  }
+
+  .welcomePhoto {
+    bottom: 0;
+    height: 16em;
+    right: 1em;
+  }
+
+  .intro p {
+    width: unset;
+  }
+
+  .mouseScroll {
+    bottom: 3em;
+    left: 3em;
+  }
+
+  .skillContent,
+  .projectContent {
+    /* font-size: 2em; */
+    padding: 2em 0;
+  }
+
+  #skillPage {
+    height: unset;
+  }
+
+  #blogPage {
+    display: block;
+    background: rgba(7, 9, 14, 1) 100%;
+  }
+
+  .blogText {
+    font-size: smaller;
+    height: 5em;
+    padding: 1em;
+    overflow: hidden;
+  }
+
+  .blogContent {
+    display: block;
+  }
+
+  .blogPost {
+    height: 22em;
+    /* margin-bottom: 1em; */
+  }
+
+  .projectContainer {
+    transform: unset;
+    position: unset;
+    width: unset;
+    height: unset;
+    /* display: flex; */
+    flex-wrap: wrap;
+    width: 320px;
+    margin: auto;
+  }
+
+  .projectContainer .project {
+    width: 100px;
+    height: 100px;
+  }
+
+  .contactForm {
+    width: unset;
+  }
+
+  #contactPage {
+    gap: 0;
+    height: 680px;
+  }
+
+  .footerSocialImages {
+    text-align: center;
+  }
+
+  .resumebttn {
+    left: 1em;
+  }
+
+  .project {
+    font-size: 10px;
+  }
+
+  .skillContent h2,
+  .projectContent h2,
+  #contactPage h2 {
+    /* font-size: 1em; */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  #introPage {
+    /* background-color: red; */
+    padding: 0 3em;
+    height: 820px;
+  }
+
+  .introContent {
+    /* background-color: red; */
+    width: 100%;
+    padding: 0;
+    height: inherit;
+  }
+
+  #skillPage {
+    height: unset;
+  }
+
+  .skillContent,
+  .projectContent {
+    /* font-size: 2em; */
+    padding: 2em 0;
+  }
+
+  .welcomePhoto {
+    bottom: 0;
+    height: 40em;
+    right: 1em;
+  }
+
+  .mouseScroll {
+    /* bottom: 3em; */
+    left: 3em;
+  }
+
+  .socialMedia {
+    visibility: hidden;
+  }
+
+  .resumebttn {
+    left: 4em;
+  }
+
+  .welcomePhoto {
+    height: 33em;
+    right: 5em;
+  }
+
+  .intro p {
+    /* width: 307px; */
+  }
+
+  .navbar .navlink {
+    text-decoration: none;
+    padding: 1em;
+  }
+
+  .navbar .navlink:hover {
+    padding: 1em;
+  }
+
+  .blogPost {
+    height: 60em;
+  }
+
+  .projectContainer {
+    transform: unset;
+    position: unset;
+    width: unset;
+    height: unset;
+    /* display: flex; */
+    flex-wrap: wrap;
+    /* width: 320px; */
+    margin: auto;
+  }
+
+  .projectContainer .project {
+    width: 200px;
+    height: 200px;
+  }
+
+  .projectContent {
+    max-width: max-content;
+    padding: 0 2em;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1440px) {
+  .introContent {
+    /* background-color: red; */
+    /* width: 100%; */
+    padding: 0 18em;
+    /* height: inherit; */
+    height: 880px;
+  }
+
+  .welcomePhoto {
+    bottom: 0;
+    height: 46em;
+    right: 1em;
+  }
+
+  .socialMedia {
+    left: 8em;
+  }
+
+  .resumebttn {
+    left: 18em;
+  }
 }
