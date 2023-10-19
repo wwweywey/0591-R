@@ -202,21 +202,47 @@ body {
 #skillPage {
   background-color: #072541;
 }
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  text-align: center;
+  justify-content: center;
+}
 
-.skillIcon {
-  /* fill: #fca326; */
+/* .skillIcon {
+
   height: 50px;
   margin: 20px;
   padding: 22px;
   border-radius: 5px;
   border: 1px solid transparent;
+} */
+
+.skill-icon {
+  width: 5em;
+  margin: 1.4em 0.1em;
+  border-radius: 5px;
+  border: 1px solid transparent;
 }
 
-.skillIcon:hover {
+.skill-icon:hover {
+  transform: scale(120%);
+}
+
+/* .icon-name {
+  font-size: 0.3em;
+} */
+.skill-icon img {
+  height: 3em;
+}
+
+/* .skillIcon:hover {
   background-color: #072541;
   border: 1px solid #fca326;
   transform: scale(150%);
-}
+} */
 
 #skillPage,
 #projectPage,
@@ -285,6 +311,12 @@ body {
 
 .blogPost img {
   filter: grayscale(100);
+}
+
+.post1:hover,
+.post2:hover,
+.post3:hover {
+  filter: grayscale(0);
 }
 
 /* -------------- PROEJCT PAGE -------------- */
