@@ -527,6 +527,133 @@ footer p {
   }
 }
 
+@media (min-width: 480px) and (max-width: 767px) {
+  #introPage {
+    /* display: flex; */
+    /* justify-content: center; */
+    /* width: 100vw; */
+    height: 680px;
+  }
+
+  .introContent {
+    /* background-color: red; */
+    width: 100%;
+    padding: 0;
+    height: inherit;
+  }
+
+  .navbar {
+    gap: 0;
+  }
+
+  .intro {
+    /* position: unset; */
+    padding: 0 1em;
+    /* height: 680px;*/
+  }
+
+  #header {
+    padding: 1em;
+  }
+
+  .navbar ul {
+    visibility: hidden;
+  }
+
+  .socialMedia {
+    visibility: hidden;
+  }
+
+  .welcomePhoto {
+    bottom: 0;
+    height: 16em;
+    right: 1em;
+  }
+
+  .intro p {
+    width: unset;
+  }
+
+  .mouseScroll {
+    bottom: 3em;
+    left: 3em;
+  }
+
+  .skillContent,
+  .projectContent {
+    /* font-size: 2em; */
+    padding: 2em 0;
+  }
+
+  #skillPage {
+    height: unset;
+  }
+
+  #blogPage {
+    display: block;
+    background: rgba(7, 9, 14, 1) 100%;
+  }
+
+  .blogText {
+    font-size: smaller;
+    height: 5em;
+    padding: 1em;
+    overflow: hidden;
+  }
+
+  .blogContent {
+    display: block;
+  }
+
+  .blogPost {
+    height: 22em;
+    /* margin-bottom: 1em; */
+  }
+
+  .projectContainer {
+    transform: unset;
+    position: unset;
+    width: unset;
+    height: unset;
+    /* display: flex; */
+    flex-wrap: wrap;
+    width: 320px;
+    margin: auto;
+  }
+
+  .projectContainer .project {
+    width: 100px;
+    height: 100px;
+  }
+
+  .contactForm {
+    width: unset;
+  }
+
+  #contactPage {
+    gap: 0;
+    height: 680px;
+  }
+
+  .footerSocialImages {
+    text-align: center;
+  }
+
+  .resumebttn {
+    left: 1em;
+  }
+
+  .project {
+    font-size: 10px;
+  }
+
+  .skillContent h2,
+  .projectContent h2,
+  #contactPage h2 {
+    /* font-size: 1em; */
+  }
+}
+
 @media (min-width: 768px) and (max-width: 1199px) {
   #introPage {
     /* background-color: red; */
