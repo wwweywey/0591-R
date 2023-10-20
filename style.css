@@ -169,9 +169,6 @@ body {
   height: 100%;
 }
 
-.landingPage {
-}
-
 .mouseScroll {
   position: absolute;
   bottom: 231px;
@@ -248,7 +245,7 @@ body {
 #projectPage,
 #contactPage {
   display: flex;
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -323,31 +320,39 @@ body {
 
 .skillContent,
 .projectContent {
-  max-width: 500px;
+  /* max-width: 500px;*/
   text-align: center;
   /* font-size: 60px; */
 }
 
+.projectContent {
+  padding: 6em 0;
+}
+
 #projectPage {
-  height: 50vh;
+  height: 80vh;
   z-index: 3;
   position: relative;
   background-color: #072541;
+  align-items: unset;
 }
 
 .projectContainer {
-  width: 50%;
-  height: 50%;
-  position: absolute;
+  width: 70%;
+  /* height: 50%; */
+  /* position: absolute; */
   display: flex;
   gap: 8px;
-  left: 50%;
-  transform: translateX(-50%);
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
 }
 
 .projectContainer .project {
-  flex: 1;
-  background-color: #afafaf;
+  /* flex: 1; */
+  background-color: #033457;
   text-align: center;
   border-radius: 5px;
   vertical-align: middle;
@@ -359,12 +364,52 @@ body {
 
 .project {
   display: flex;
-  height: 240px;
+  height: 230px;
   width: 320px;
   align-items: center;
   justify-content: center;
   font-size: 2em;
   font-weight: 900;
+  overflow: hidden;
+  /* background-color: #fca326; */
+  /* flex-wrap: wrap; */
+}
+
+.projectInset {
+  width: inherit;
+  height: inherit;
+  transform: scale(1.4) rotate(10deg);
+  opacity: 0.5;
+}
+
+.project-one {
+  background: url(./Assets/img/etc.jpg) no-repeat;
+  background-size: cover;
+  background-position-y: center center;
+}
+
+.project-two {
+  background: url(./Assets/img/branded.jpg) no-repeat;
+  background-size: cover;
+  background-position-y: center center;
+}
+
+.project-three {
+  background: url(./Assets/img/pong.jpg) no-repeat;
+  background-size: cover;
+  background-position-y: center center;
+}
+
+.projectInset:hover {
+  transform: scale(1) rotate(0deg);
+  transition: cubic-bezier(0.83, -0.01, 0.68, 1.01) 0.2s;
+  opacity: 1;
+  /* cursor: pointer; */
+}
+
+.projectTitle {
+  color: #8b8b8b;
+  position: absolute;
 }
 
 /* -------------- CONTACT PAGE -------------- */
