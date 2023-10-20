@@ -169,9 +169,6 @@ body {
   height: 100%;
 }
 
-.landingPage {
-}
-
 .mouseScroll {
   position: absolute;
   bottom: 231px;
@@ -347,7 +344,7 @@ body {
 
 .projectContainer .project {
   flex: 1;
-  background-color: #afafaf;
+  background-color: #033457;
   text-align: center;
   border-radius: 5px;
   vertical-align: middle;
@@ -359,12 +356,35 @@ body {
 
 .project {
   display: flex;
-  height: 240px;
+  height: 320px;
   width: 320px;
   align-items: center;
   justify-content: center;
   font-size: 2em;
   font-weight: 900;
+  overflow: hidden;
+  /* background-color: #fca326; */
+}
+
+.projectInset {
+  background: url(./Assets/img/thumb.jpg) no-repeat;
+  background-size: cover;
+  width: inherit;
+  height: inherit;
+  transform: scale(1.4) rotate(10deg);
+  opacity: 0.5;
+}
+
+.projectInset:hover {
+  transform: scale(1) rotate(0deg);
+  transition: cubic-bezier(0.83, -0.01, 0.68, 1.01) 0.2s;
+  opacity: 1;
+  /* cursor: pointer; */
+}
+
+.projectTitle {
+  color: #8b8b8b;
+  position: absolute;
 }
 
 /* -------------- CONTACT PAGE -------------- */
